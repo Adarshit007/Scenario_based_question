@@ -1,11 +1,8 @@
 use it_4_all
 
-
-
 CREATE TABLE Emp(
 [Group]  varchar(20),
 [Sequence]  int )
-
 INSERT INTO Emp VALUES('A',1)
 INSERT INTO Emp VALUES('A',2)
 INSERT INTO Emp VALUES('A',3)
@@ -21,9 +18,7 @@ INSERT INTO Emp VALUES('C',3)
 
 select * from emp
 
-
-
---Problem Statement : Write a SQL query to find the maximum and minimum values of continuous ‘Sequence’ in each ‘Group’
+--Problem Statement : Write a SQL query to find the maximum and minimum values of continuous â€˜Sequenceâ€™ in each â€˜Groupâ€™
 
 -- This query identifies continuous sequence ranges within each group
 -- It uses ROW_NUMBER to detect breaks (gaps) in sequences
@@ -59,11 +54,6 @@ ROW_NUMBER() over(partition by [group] order by [sequence]) as rnk,
 from emp) as a
 group by [group],[grp_split]
 order by [group]
-
-
-
-
-
 
 
 
