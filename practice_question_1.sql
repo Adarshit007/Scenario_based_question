@@ -20,8 +20,6 @@ INSERT [dbo].[Transaction_Tbl] ([CustID], [TranID], [TranAmt], [TranDate]) VALUE
 
 select * from Transaction_Tbl
 
-
-
 --Problem Statement:-
 --Transatcion_tbl Table has four columns CustID, TranID, TranAmt, and  TranDate.
 --User has to display all these fields along with maximum TranAmt for each CustID and ratio of TranAmt and maximum TranAmt for each transaction.
@@ -43,11 +41,6 @@ MAX(tranamt) as maxtran_amt
 from Transaction_Tbl
 group by CustID) as b
 on a.CustID=b.CustID
-
-
-
-
-
 
 
 
